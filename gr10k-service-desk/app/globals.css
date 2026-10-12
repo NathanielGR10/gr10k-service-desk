@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --paper: #a5cac2;
+  --surface: #fbfdfc;
+  --surface-2: #edf2f0;
+  --ink: #1e2724;
+  --ink-2: #4f5e59;
+  --muted: #80928c;
+  --footer-ink: #3e4f4a;
+  --border: #dce5e1;
+  --border-strong: #c3d0ca;
+
+  --accent: #c33e22;
+  --accent-strong: #a5331b;
+  --accent-soft: #f7e2db;
+  --accent-ink: #ffffff;
+
+  --identity-soft: #e4ebe8;
+  --identity-ink: #3f4f49;
+
+  --active-bg: #23312c;
+  --active-ink: #ffffff;
+
+  --good: #1e7a42;
+  --good-soft: rgba(30, 122, 66, 0.12);
+  --warning: #a8680a;
+  --warning-soft: rgba(201, 138, 20, 0.18);
+  --critical: #b3261e;
+  --critical-soft: rgba(179, 38, 30, 0.12);
+
+  --cat-return: #2a78d6;
+  --cat-exchange: #4a3aa7;
+  --cat-damage: #1baf7a;
+  --cat-lost: #c98500;
+  --cat-wrong: #c2447a;
+  --cat-sizing: #157a3d;
+  --cat-shipping: #5c6b7a;
+  --cat-other: #8b9099;
+
+  --shadow: 0 1px 2px rgba(20, 22, 25, 0.05), 0 8px 20px -10px rgba(20, 22, 25, 0.15);
+}
+
+/* Follows the system preference only until the person (or this app) sets an
+   explicit data-theme — see ThemeToggle. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f1d1a;
+    --surface: #1b1e22;
+    --surface-2: #23262b;
+    --ink: #ecedef;
+    --ink-2: #b7bbc1;
+    --muted: #878c93;
+    --footer-ink: #878c93;
+    --border: #2e3238;
+    --border-strong: #3c4148;
+
+    --accent: #e8734f;
+    --accent-strong: #f08a68;
+    --accent-soft: #332420;
+    --accent-ink: #1b1612;
+
+    --identity-soft: #2a2e33;
+    --identity-ink: #c7cbd1;
+
+    --active-bg: #ecedef;
+    --active-ink: #15171a;
+
+    --good: #3fbf66;
+    --good-soft: rgba(63, 191, 102, 0.2);
+    --warning: #e0a430;
+    --warning-soft: rgba(224, 164, 48, 0.2);
+    --critical: #e5584c;
+    --critical-soft: rgba(229, 88, 76, 0.2);
+
+    --cat-return: #3987e5;
+    --cat-exchange: #9085e9;
+    --cat-damage: #199e70;
+    --cat-lost: #c98500;
+    --cat-wrong: #d55181;
+    --cat-sizing: #3fbf5f;
+    --cat-shipping: #8b98a6;
+    --cat-other: #878c93;
+
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Explicit override set by ThemeToggle, regardless of system preference. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f1d1a;
+  --surface: #1b1e22;
+  --surface-2: #23262b;
+  --ink: #ecedef;
+  --ink-2: #b7bbc1;
+  --muted: #878c93;
+  --footer-ink: #878c93;
+  --border: #2e3238;
+  --border-strong: #3c4148;
+
+  --accent: #e8734f;
+  --accent-strong: #f08a68;
+  --accent-soft: #332420;
+  --accent-ink: #1b1612;
+
+  --identity-soft: #2a2e33;
+  --identity-ink: #c7cbd1;
+
+  --active-bg: #ecedef;
+  --active-ink: #15171a;
+
+  --good: #3fbf66;
+  --good-soft: rgba(63, 191, 102, 0.2);
+  --warning: #e0a430;
+  --warning-soft: rgba(224, 164, 48, 0.2);
+  --critical: #e5584c;
+  --critical-soft: rgba(229, 88, 76, 0.2);
+
+  --cat-return: #3987e5;
+  --cat-exchange: #9085e9;
+  --cat-damage: #199e70;
+  --cat-lost: #c98500;
+  --cat-wrong: #d55181;
+  --cat-sizing: #3fbf5f;
+  --cat-shipping: #8b98a6;
+  --cat-other: #878c93;
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+/* Used only for the "Service Desk" title/subtitle, the GR10K brand line,
+   and the ticket-form modal title. */
+.font-header-serif {
+  font-family: "Times New Roman", Times, serif;
+}
