@@ -8,6 +8,7 @@ export const REASONS: { id: ReasonId; label: string; varName: string }[] = [
   { id: "wrong", label: "Wrong Item Sent", varName: "--cat-wrong" },
   { id: "sizing", label: "Sizing / Fit", varName: "--cat-sizing" },
   { id: "delay", label: "Shipping Delay", varName: "--cat-shipping" },
+  { id: "inquiry", label: "Inquiry", varName: "--cat-inquiry" },
   { id: "other", label: "Other", varName: "--cat-other" },
 ];
 
