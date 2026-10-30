@@ -8,6 +8,7 @@ export type ReasonId =
   | "wrong"
   | "sizing"
   | "delay"
+  | "inquiry"
   | "other";
 
 export interface Ticket {
