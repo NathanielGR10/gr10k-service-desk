@@ -39,6 +39,7 @@
   --cat-wrong: #c2447a;
   --cat-sizing: #157a3d;
   --cat-shipping: #5c6b7a;
+  --cat-inquiry: #0f8b8d;
   --cat-other: #8b9099;
 
   --shadow: 0 1px 2px rgba(20, 22, 25, 0.05), 0 8px 20px -10px rgba(20, 22, 25, 0.15);
@@ -84,6 +85,7 @@
     --cat-wrong: #d55181;
     --cat-sizing: #3fbf5f;
     --cat-shipping: #8b98a6;
+    --cat-inquiry: #2fb3b5;
     --cat-other: #878c93;
 
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5);
