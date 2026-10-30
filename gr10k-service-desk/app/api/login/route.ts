@@ -15,19 +15,21 @@ export async function POST(request: NextRequest) {
   if (!expected) {
     url.pathname = "/login";
     url.searchParams.set("error", "not-configured");
-    return NextResponse.redirect(url);
+    return NextResponse.redirect(url, 303);
   }
 
   if (password !== expected) {
     url.pathname = "/login";
     url.searchParams.set("error", "1");
     url.searchParams.set("from", redirectTo);
-    return NextResponse.redirect(url);
+    return NextResponse.redirect(url, 303);
   }
 
-  url.pathname = redirectTo.startsWith("/") ? redirectTo : "/";
+  const safePath =
+    redirectTo.startsWith("/") && !redirectTo.startsWith("//") ? redirectTo : "/";
+  url.pathname = safePath;
   url.search = "";
-  const response = NextResponse.redirect(url);
+  const response = NextResponse.redirect(url, 303);
   response.cookies.set(SESSION_COOKIE, SESSION_VALUE, {
     httpOnly: true,
     sameSite: "lax",
